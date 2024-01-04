@@ -14,16 +14,17 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 import static java.lang.Integer.parseInt;
+import java.util.Timer;
 
 public class GUI extends JFrame{
     private JPanel panel1;
 
     public GUI()
     {
+
+        final GetMotionInterval[] motion = new GetMotionInterval[1];
         //JFreeChart
         DefaultCategoryDataset ds = new DefaultCategoryDataset();
-        ds.addValue(100, "test", "test1");
-        ds.addValue(20, "test", "test2");
         JFreeChart jfc = ChartFactory.createLineChart ("test", "Temps","Vitesse", ds, PlotOrientation.VERTICAL,false, true, false);
         ChartPanel cp = new ChartPanel(jfc);
         getContentPane().add(cp, BorderLayout.CENTER);
@@ -38,8 +39,10 @@ public class GUI extends JFrame{
         inputPanel.add(new JLabel("Faim: "));
         inputPanel.add(timestamp2);
         JButton buttonscreenshot = new JButton("Screenshot");
+        JButton buttonsimulation = new JButton(">>");
         inputPanel.add(buttonimporter);
         inputPanel.add(buttonscreenshot);
+        inputPanel.add(buttonsimulation);
 
 
         getContentPane().add(inputPanel, BorderLayout.SOUTH);
@@ -47,13 +50,21 @@ public class GUI extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
 
+                ds.clear();
                 try {
-                    if(parseInt(timestamp2.getText()) - parseInt(timestamp1.getText()) == 120)
+                    if(timestamp1.getText() != null && parseInt(timestamp1.getText()) != 0)
                     {
-                        GetMotionInterval motion = new GetMotionInterval("192.168.0.18", parseInt(timestamp1.getText()),  parseInt(timestamp2.getText()));
-                        for (int i = 0; i < motion.getSize(); i++) {
-                            Motion temp = motion.get(i);
-                            ds.addValue(temp.getAccX(), "AccX", Integer.toString(temp.getTimestamp()));
+                        timestamp2.setText(Integer.toString(parseInt(timestamp1.getText()) + 120));
+                        motion[0] = new GetMotionInterval("192.168.0.18", parseInt(timestamp1.getText()),  parseInt(timestamp2.getText()));
+                        if (motion[0].getSize() == 0) {
+                            JOptionPane.showMessageDialog(GUI.this, "Aucune donnée présente !");
+                        }
+                        else {
+                            for (int i = 0; i < 20; i++) {
+                                Motion temp = motion[0].get(i);
+                                ds.addValue(temp.getAccX(), "AccX", Integer.toString(temp.getTimestamp()));
+                                ds.addValue(temp.getAccY(), "AccY", Integer.toString(temp.getTimestamp()));
+                            }
                         }
                     }
                     else
@@ -61,6 +72,15 @@ public class GUI extends JFrame{
                 } catch (JsonProcessingException ex) {
                     throw new RuntimeException(ex);
                 }
+            }
+        });
+        buttonsimulation.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ThreadStart th = new ThreadStart(500, motion[0], ds);
+                Thread th1 = new Thread(th);
+                th1.start();
+
             }
         });
 

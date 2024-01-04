@@ -7,11 +7,10 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.Timer;
 
 public class Main {
     public static void main(String[] args) throws JsonProcessingException {
-
-       //GetMotionInterval motion = new GetMotionInterval("192.168.0.18", 1);
 
        GUI test = new GUI();
     }

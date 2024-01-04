@@ -11,8 +11,8 @@ public class GetMotionInterval {
     {
         String serverIp = "";
     }
-    public GetMotionInterval(String ip, int startingInterval) throws JsonProcessingException {
-        JSONArray received = GetJSON.init("http://" + ip + ":8080/ords/papabergh/demo/motion?limit=120&beginsample=" +(startingInterval) + "&lastsample=" + (startingInterval + 119), "items");
+    public GetMotionInterval(String ip, int startingInterval, int endingInterval) throws JsonProcessingException {
+        JSONArray received = GetJSON.init("http://" + ip + ":8080/ords/papabergh/demo/motion?limit=120&beginsample=" +(startingInterval) + "&lastsample=" + endingInterval, "items");
         for(int i = 0; i < received.length(); i++)
         {
             JSONObject current_object = new JSONObject(received.get(i).toString());
@@ -25,5 +25,6 @@ public class GetMotionInterval {
     {
         return this.listMotion.get(index);
     }
+    public int getSize() {return listMotion.size();}
 }
 
