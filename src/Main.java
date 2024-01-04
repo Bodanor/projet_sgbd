@@ -11,6 +11,8 @@ import java.util.Iterator;
 public class Main {
     public static void main(String[] args) throws JsonProcessingException {
 
-       GetMotionInterval motion = new GetMotionInterval("192.168.0.18", 1);
+       //GetMotionInterval motion = new GetMotionInterval("192.168.0.18", 1);
+
+       GUI test = new GUI();
     }
 }
