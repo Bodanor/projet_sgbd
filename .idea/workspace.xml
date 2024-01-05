@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2482c87-e45e-4500-bf8b-f909a5e745db" name="Changes" comment="Optimization de code">
+    <list default="true" id="c2482c87-e45e-4500-bf8b-f909a5e745db" name="Changes" comment="More optimization">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ControlleurGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ControlleurGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GetMotionInterval.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GetMotionInterval.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Motion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Motion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ThreadStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ThreadStart.java" afterDir="false" />
     </list>
     <list id="953f5fdb-c0ad-4f49-8341-5e42216b12f0" name="Changes by liwinux" comment="" />
     <list id="39c5a1ec-4b0b-4871-bac4-50f4e78411bc" name="Changes by martin" comment="Changes by martin" />
@@ -97,7 +92,7 @@
       <workItem from="1704387108206" duration="8757000" />
       <workItem from="1704407409332" duration="30000" />
       <workItem from="1704407450414" duration="1384000" />
-      <workItem from="1704457525443" duration="3503000" />
+      <workItem from="1704457525443" duration="3867000" />
     </task>
     <task id="LOCAL-00001" summary="Checkpoint">
       <option name="closed" value="true" />
@@ -123,7 +118,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704459995012</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="More optimization">
+      <option name="closed" value="true" />
+      <created>1704461149565</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1704461149565</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,6 +137,7 @@
     <MESSAGE value="Changes by martin" />
     <MESSAGE value="Ajout d'un controlleur" />
     <MESSAGE value="Optimization de code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Optimization de code" />
+    <MESSAGE value="More optimization" />
+    <option name="LAST_COMMIT_MESSAGE" value="More optimization" />
   </component>
 </project>

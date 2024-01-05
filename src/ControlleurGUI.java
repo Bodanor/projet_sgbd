@@ -25,7 +25,7 @@ public class ControlleurGUI extends Component implements ActionListener, WindowL
     {
         if (e.getActionCommand().equals("Screenshot")) {
             try {
-                File fi = new File("");
+                File fi = new File("screenshot.jpeg");
                 ChartUtils.saveChartAsJPEG(fi, fenetre.getJfc(), fenetre.getChartPanel().getWidth(), fenetre.getChartPanel().getHeight());
                 byte[] byteArray = Files.readAllBytes(fi.toPath());
                 String encoded = Base64.getEncoder().encodeToString(byteArray);
@@ -34,7 +34,7 @@ public class ControlleurGUI extends Component implements ActionListener, WindowL
                 String urlParameters = json.toString();
                 byte[] postData = urlParameters.getBytes(StandardCharsets.UTF_8 );
                 int postDataLength = postData.length;
-                URL url = new URL("http://localhost:8080/ords/hr/demo/blob");
+                URL url = new URL("http://192.168.0.18:8080/ords/papabergh/demo/motion");
                 HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                 conn.setDoOutput(true);
                 conn.setInstanceFollowRedirects(false);
