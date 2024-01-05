@@ -6,11 +6,8 @@ import java.util.ArrayList;
 
 public class GetMotionInterval {
 
-    private final ArrayList<Motion> listMotion = new ArrayList<Motion>();
-    public GetMotionInterval()
-    {
-        String serverIp = "";
-    }
+    private final ArrayList<Motion> listMotion = new ArrayList<>();
+
     public GetMotionInterval(String ip, int startingInterval, int endingInterval) throws JsonProcessingException {
         JSONArray received = GetJSON.init("http://" + ip + ":8080/ords/papabergh/demo/motion?limit=120&beginsample=" +(startingInterval) + "&lastsample=" + endingInterval, "items");
         for(int i = 0; i < received.length(); i++)

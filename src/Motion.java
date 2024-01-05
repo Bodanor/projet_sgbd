@@ -23,18 +23,6 @@ public class Motion {
 
     @JsonProperty("stamp")
     public int timestamp;
-    public Motion()
-    {
-        setId(0);
-        setType("0");
-        setTimestamp(0);
-        setGyroX(0);
-        setGyroY(0);
-        setGyroZ(0);
-        setAccX(0);
-        setAccY(0);
-        setAccZ(0);
-    }
 
     public Motion(int id, float accx, float accy, float accz, float gyrox, float giroy, float gyroz, String type, int time)
     {

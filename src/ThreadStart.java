@@ -1,12 +1,10 @@
 import org.jfree.data.category.DefaultCategoryDataset;
 
-import java.util.ArrayList;
-
 public class ThreadStart implements Runnable{
 
-    private int duree;
-    private GetMotionInterval motions;
-    private DefaultCategoryDataset ds;
+    private final int duree;
+    private final GetMotionInterval motions;
+    private final DefaultCategoryDataset ds;
 
 
     public ThreadStart(int d, GetMotionInterval motions, DefaultCategoryDataset ds)
