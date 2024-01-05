@@ -14,11 +14,16 @@ import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.util.Base64;
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 import static java.lang.Integer.parseInt;
 
 public class ControlleurGUI extends Component implements ActionListener, WindowListener {
     private final GUI fenetre;
+    private ThreadStart th;
+    private Thread th1;
+    private final AtomicBoolean isRunning;
 
     @Override
     public void actionPerformed(ActionEvent e)
@@ -57,10 +62,11 @@ public class ControlleurGUI extends Component implements ActionListener, WindowL
 
         }
         if (e.getActionCommand().equals("Simulation")) {
-            ThreadStart th = new ThreadStart(500, fenetre.getMotions(), fenetre.getDataset());
-            Thread th1 = new Thread(th);
-            th1.start();
-
+            if (th.getMutex().isLocked()) {
+                th.getMutex().unlock();
+            }
+            else
+                th.getMutex().lock();
         }
         if (e.getActionCommand().equals("Importer")) {
             fenetre.getDataset().clear();
@@ -89,7 +95,12 @@ public class ControlleurGUI extends Component implements ActionListener, WindowL
 
     }
     public ControlleurGUI(GUI fenetre) {
+
         this.fenetre = fenetre;
+        this.isRunning = new AtomicBoolean(false);
+        th = new ThreadStart(500, fenetre, fenetre.getDataset());
+        th1 = new Thread(th);
+        th1.start();
     }
 
 
