@@ -11,7 +11,6 @@ import java.util.Timer;
 
 public class Main {
     public static void main(String[] args) throws JsonProcessingException {
-
        GUI test = new GUI();
     }
 }

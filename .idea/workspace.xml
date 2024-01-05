@@ -5,13 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c2482c87-e45e-4500-bf8b-f909a5e745db" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
-    <list id="953f5fdb-c0ad-4f49-8341-5e42216b12f0" name="Changes by liwinux" comment="">
-      <change beforePath="$PROJECT_DIR$/src/GetMotionInterval.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GetMotionInterval.java" afterDir="false" />
+    <list id="953f5fdb-c0ad-4f49-8341-5e42216b12f0" name="Changes by liwinux" comment="" />
+    <list id="39c5a1ec-4b0b-4871-bac4-50f4e78411bc" name="Changes by martin" comment="">
+      <change beforePath="$PROJECT_DIR$/src/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI.java" afterDir="false" />
     </list>
-    <list id="39c5a1ec-4b0b-4871-bac4-50f4e78411bc" name="Changes by martin" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -92,6 +92,7 @@
       <workItem from="1704385194305" duration="1401000" />
       <workItem from="1704387108206" duration="8757000" />
       <workItem from="1704407409332" duration="30000" />
+      <workItem from="1704407450414" duration="1384000" />
     </task>
     <servers />
   </component>
