@@ -24,6 +24,10 @@ public class ThreadStart implements Runnable{
                 Motion temp = motions.get(j);
                 ds.addValue(temp.getAccX(), "AccX", Integer.toString(temp.getTimestamp()));
                 ds.addValue(temp.getAccY(), "AccY", Integer.toString(temp.getTimestamp()));
+                ds.addValue(temp.getAccZ(), "AccZ", Integer.toString(temp.getTimestamp()));
+                ds.addValue(temp.getGyroX(), "GyroX", Integer.toString(temp.getTimestamp()));
+                ds.addValue(temp.getGyroY(), "GyroY", Integer.toString(temp.getTimestamp()));
+                ds.addValue(temp.getGyroZ(), "GyroZ", Integer.toString(temp.getTimestamp()));
             }
             try {
                 Thread.sleep(duree);
