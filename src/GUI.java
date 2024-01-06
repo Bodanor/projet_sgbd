@@ -11,8 +11,10 @@ public class GUI extends JFrame{
     private final JButton buttonimporter;
     private final JTextField timestamp1;
     private final JTextField timestamp2;
+    private final JTextField text;
     private final JButton buttonscreenshot;
     private final JButton buttonsimulation;
+    private final JButton buttonhisto;
     private final ChartPanel cp;
     private final DefaultCategoryDataset ds;
     private GetMotionInterval motion;
@@ -37,14 +39,19 @@ public class GUI extends JFrame{
         inputPanel.add(timestamp2);
         buttonscreenshot = new JButton("Screenshot");
         buttonsimulation = new JButton(">>");
+        buttonhisto = new JButton("Voir Histogramme");
+        text = new JTextField(10);
         inputPanel.add(buttonimporter);
         inputPanel.add(buttonscreenshot);
         inputPanel.add(buttonsimulation);
+        inputPanel.add(text);
+        inputPanel.add(buttonhisto);
 
         // Ajout des actions sur les boutons pour le controleur
         buttonscreenshot.setActionCommand("Screenshot");
         buttonsimulation.setActionCommand("Simulation");
         buttonimporter.setActionCommand("Importer");
+        buttonhisto.setActionCommand("Histogramme");
 
         getContentPane().add(inputPanel, BorderLayout.SOUTH);
 
@@ -67,7 +74,7 @@ public class GUI extends JFrame{
 
     public DefaultCategoryDataset getDataset(){ return this.ds;}
     public void setMotion(GetMotionInterval interval) {this.motion = interval;}
-
+    public String getTortDroit(){return text.getText();}
     public JFreeChart getJfc() { return this.jfc;}
     public ChartPanel getChartPanel() {return this.cp;}
     public GetMotionInterval getMotions() {return this.motion;}

@@ -90,6 +90,10 @@ public class ControlleurGUI extends Component implements ActionListener, WindowL
                 JOptionPane.showMessageDialog(fenetre, "Valeur aberrante frérot");
             }
         }
+        if(e.getActionCommand().equals("Histogramme")){
+
+            new Histogramme();
+        }
 
     }
     public ControlleurGUI(GUI fenetre) {
