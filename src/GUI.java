@@ -21,7 +21,7 @@ public class GUI extends JFrame{
     {
         //JFreeChart
         ds = new DefaultCategoryDataset();
-        jfc = ChartFactory.createLineChart ("test", "Temps","Vitesse", ds, PlotOrientation.VERTICAL,false, true, false);
+        jfc = ChartFactory.createLineChart ("test", "Temps","Vitesse", ds, PlotOrientation.VERTICAL,true, true, true);
         cp = new ChartPanel(jfc);
         getContentPane().add(cp, BorderLayout.CENTER);
 

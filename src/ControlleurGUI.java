@@ -39,7 +39,7 @@ public class ControlleurGUI extends Component implements ActionListener, WindowL
                 String urlParameters = json.toString();
                 byte[] postData = urlParameters.getBytes(StandardCharsets.UTF_8 );
                 int postDataLength = postData.length;
-                URL url = new URL("http://192.168.0.18:8080/ords/papabergh/demo/motion");
+                URL url = new URL("http://192.168.0.20:8080/ords/papabergh/demo/motion");
                 HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                 conn.setDoOutput(true);
                 conn.setInstanceFollowRedirects(false);
@@ -72,17 +72,15 @@ public class ControlleurGUI extends Component implements ActionListener, WindowL
             fenetre.getDataset().clear();
             try {
                     fenetre.setTimestamp2(Integer.toString(parseInt(fenetre.getTimeStamp1()) + 120));
-                    GetMotionInterval motions = new GetMotionInterval("192.168.0.18", parseInt(fenetre.getTimeStamp1()),  parseInt(fenetre.getTimeStamp2()));
+                    GetMotionInterval motions = new GetMotionInterval("192.168.0.20", parseInt(fenetre.getTimeStamp1()),  parseInt(fenetre.getTimeStamp2()));
                     if (motions.getSize() == 0) {
                         JOptionPane.showMessageDialog(fenetre, "Aucune donnée présente !");
                     }
                     else {
                         fenetre.setMotion(motions);
-                        for (int i = 0; i < 20; i++) {
-                            Motion temp = fenetre.getMotions().get(i);
-                            fenetre.getDataset().addValue(temp.getAccX(), "AccX", Integer.toString(temp.getTimestamp()));
-                            fenetre.getDataset().addValue(temp.getAccY(), "AccY", Integer.toString(temp.getTimestamp()));
-                        }
+                        th = new ThreadStart(500, fenetre, fenetre.getDataset());
+                        th1 = new Thread(th);
+                        th1.start();
                     }
 
             } catch (JsonProcessingException ex) {
@@ -98,9 +96,6 @@ public class ControlleurGUI extends Component implements ActionListener, WindowL
 
         this.fenetre = fenetre;
         this.isRunning = new AtomicBoolean(false);
-        th = new ThreadStart(500, fenetre, fenetre.getDataset());
-        th1 = new Thread(th);
-        th1.start();
     }
 
 
