@@ -36,10 +36,12 @@ public class ControlleurGUI extends Component implements ActionListener, WindowL
                 String encoded = Base64.getEncoder().encodeToString(byteArray);
                 JSONObject json = new JSONObject();
                 json.put("image", encoded);
+                json.put("expertise", fenetre.getTortDroit());
+                json.put("timestampaccident", fenetre.getTimeStamp1());
                 String urlParameters = json.toString();
                 byte[] postData = urlParameters.getBytes(StandardCharsets.UTF_8 );
                 int postDataLength = postData.length;
-                URL url = new URL("http://192.168.0.20:8080/ords/papabergh/demo/motion");
+                URL url = new URL("http://192.168.0.23:8080/ords/papabergh/demo/motion");
                 HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                 conn.setDoOutput(true);
                 conn.setInstanceFollowRedirects(false);
@@ -72,7 +74,7 @@ public class ControlleurGUI extends Component implements ActionListener, WindowL
             fenetre.getDataset().clear();
             try {
                     fenetre.setTimestamp2(Integer.toString(parseInt(fenetre.getTimeStamp1()) + 120));
-                    GetMotionInterval motions = new GetMotionInterval("192.168.0.20", parseInt(fenetre.getTimeStamp1()),  parseInt(fenetre.getTimeStamp2()));
+                    GetMotionInterval motions = new GetMotionInterval("192.168.0.23", parseInt(fenetre.getTimeStamp1()),  parseInt(fenetre.getTimeStamp2()));
                     if (motions.getSize() == 0) {
                         JOptionPane.showMessageDialog(fenetre, "Aucune donnée présente !");
                     }
