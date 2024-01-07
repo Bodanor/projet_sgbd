@@ -4,17 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2482c87-e45e-4500-bf8b-f909a5e745db" name="Changes" comment="Can now control the thread as well as pause/resume it">
+    <list default="true" id="c2482c87-e45e-4500-bf8b-f909a5e745db" name="Changes" comment="Starting histogramme">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ControlleurGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ControlleurGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ThreadStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ThreadStart.java" afterDir="false" />
     </list>
     <list id="953f5fdb-c0ad-4f49-8341-5e42216b12f0" name="Changes by liwinux" comment="" />
-    <list id="39c5a1ec-4b0b-4871-bac4-50f4e78411bc" name="Changes by martin" comment="Changes by martin">
-      <change beforePath="$PROJECT_DIR$/src/ControlleurGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ControlleurGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI.java" afterDir="false" />
-    </list>
+    <list id="39c5a1ec-4b0b-4871-bac4-50f4e78411bc" name="Changes by martin" comment="Changes by martin" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,28 +39,6 @@
         <option name="url" value="https://github.com/Bodanor/projet_sgbd" />
       </UrlAndAccount>
     </option>
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/ControlleurGUI.java">
-      <ranges>
-        <range start1="41" end1="42" start2="41" end2="42" changelist="c2482c87-e45e-4500-bf8b-f909a5e745db" />
-        <range start1="74" end1="75" start2="74" end2="75" changelist="c2482c87-e45e-4500-bf8b-f909a5e745db" />
-        <range start1="80" end1="85" start2="80" end2="83" changelist="c2482c87-e45e-4500-bf8b-f909a5e745db" />
-        <range start1="94" end1="94" start2="92" end2="96" changelist="39c5a1ec-4b0b-4871-bac4-50f4e78411bc" />
-        <range start1="100" end1="103" start2="102" end2="102" changelist="c2482c87-e45e-4500-bf8b-f909a5e745db" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/GUI.java">
-      <ranges>
-        <range start1="13" end1="13" start2="13" end2="14" changelist="39c5a1ec-4b0b-4871-bac4-50f4e78411bc" />
-        <range start1="15" end1="15" start2="16" end2="17" changelist="39c5a1ec-4b0b-4871-bac4-50f4e78411bc" />
-        <range start1="23" end1="24" start2="25" end2="26" changelist="c2482c87-e45e-4500-bf8b-f909a5e745db" />
-        <range start1="39" end1="39" start2="41" end2="43" changelist="39c5a1ec-4b0b-4871-bac4-50f4e78411bc" />
-        <range start1="42" end1="42" start2="46" end2="48" changelist="39c5a1ec-4b0b-4871-bac4-50f4e78411bc" />
-        <range start1="47" end1="47" start2="53" end2="54" changelist="39c5a1ec-4b0b-4871-bac4-50f4e78411bc" />
-        <range start1="69" end1="70" start2="76" end2="77" changelist="39c5a1ec-4b0b-4871-bac4-50f4e78411bc" />
-      </ranges>
-    </file>
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
@@ -132,7 +106,8 @@
       <workItem from="1704457525443" duration="4656000" />
       <workItem from="1704470682797" duration="6099000" />
       <workItem from="1704490437304" duration="4774000" />
-      <workItem from="1704545008982" duration="1902000" />
+      <workItem from="1704545008982" duration="4038000" />
+      <workItem from="1704594304901" duration="731000" />
     </task>
     <task id="LOCAL-00001" summary="Checkpoint">
       <option name="closed" value="true" />
@@ -190,7 +165,31 @@
       <option name="project" value="LOCAL" />
       <updated>1704483919322</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Thread now starts at import click and does a one shot loop before going infinite">
+      <option name="closed" value="true" />
+      <created>1704548084690</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1704548084690</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Changes by martin">
+      <option name="closed" value="true" />
+      <created>1704548090928</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1704548090928</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Starting histogramme">
+      <option name="closed" value="true" />
+      <created>1704548109544</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1704548109544</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,13 +197,15 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Checkpoint" />
-    <MESSAGE value="Changes by martin" />
     <MESSAGE value="Ajout d'un controlleur" />
     <MESSAGE value="Optimization de code" />
     <MESSAGE value="More optimization" />
     <MESSAGE value="Blob POST working" />
     <MESSAGE value="Added more axis" />
     <MESSAGE value="Can now control the thread as well as pause/resume it" />
-    <option name="LAST_COMMIT_MESSAGE" value="Can now control the thread as well as pause/resume it" />
+    <MESSAGE value="Thread now starts at import click and does a one shot loop before going infinite" />
+    <MESSAGE value="Changes by martin" />
+    <MESSAGE value="Starting histogramme" />
+    <option name="LAST_COMMIT_MESSAGE" value="Starting histogramme" />
   </component>
 </project>
