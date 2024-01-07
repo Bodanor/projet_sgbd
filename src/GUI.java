@@ -11,7 +11,7 @@ public class GUI extends JFrame{
     private final JButton buttonimporter;
     private final JTextField timestamp1;
     private final JTextField timestamp2;
-    private final JTextField text;
+    private final JTextField expertiseText;
     private final JButton buttonscreenshot;
     private final JButton buttonsimulation;
     private final JButton buttonhisto;
@@ -40,11 +40,11 @@ public class GUI extends JFrame{
         buttonscreenshot = new JButton("Screenshot");
         buttonsimulation = new JButton(">>");
         buttonhisto = new JButton("Voir Histogramme");
-        text = new JTextField(10);
+        expertiseText = new JTextField(10);
         inputPanel.add(buttonimporter);
         inputPanel.add(buttonscreenshot);
         inputPanel.add(buttonsimulation);
-        inputPanel.add(text);
+        inputPanel.add(expertiseText);
         inputPanel.add(buttonhisto);
 
         // Ajout des actions sur les boutons pour le controleur
@@ -74,7 +74,7 @@ public class GUI extends JFrame{
 
     public DefaultCategoryDataset getDataset(){ return this.ds;}
     public void setMotion(GetMotionInterval interval) {this.motion = interval;}
-    public String getTortDroit(){return text.getText();}
+    public String getTortDroit(){return expertiseText.getText();}
     public JFreeChart getJfc() { return this.jfc;}
     public ChartPanel getChartPanel() {return this.cp;}
     public GetMotionInterval getMotions() {return this.motion;}
