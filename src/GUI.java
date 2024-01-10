@@ -64,7 +64,7 @@ public class GUI extends JFrame{
         buttonimporter.addActionListener(c);
         buttonscreenshot.addActionListener(c);
         buttonsimulation.addActionListener(c);
-
+        buttonhisto.addActionListener(c);
         this.addWindowListener(c);
     }
 

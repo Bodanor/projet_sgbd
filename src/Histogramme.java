@@ -16,13 +16,14 @@ import java.util.*;
 
 public class Histogramme extends JFrame {
 
-    private final ChartPanel cp;
-    private final HistogramDataset ds;
     private GetMotionInterval motion;
-    private final JFreeChart jfc;
-    private ArrayList<Float> listSlow;
-    private ArrayList<Float> listNormal;
-    private ArrayList<Float> listAgressive;
+    private ArrayList<Motion> listSlow;
+    private ArrayList<Motion> listNormal;
+    private ArrayList<Motion> listAgressive;
+
+    private JScrollPane scrollPane;
+
+
 
     public Histogramme() throws JsonProcessingException {
 
