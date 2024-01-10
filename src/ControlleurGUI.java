@@ -41,7 +41,7 @@ public class ControlleurGUI extends Component implements ActionListener, WindowL
                 String urlParameters = json.toString();
                 byte[] postData = urlParameters.getBytes(StandardCharsets.UTF_8 );
                 int postDataLength = postData.length;
-                URL url = new URL("http://192.168.0.23:8080/ords/papabergh/demo/motion");
+                URL url = new URL("http://192.168.0.17:8080/ords/papabergh/demo/motion");
                 HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                 conn.setDoOutput(true);
                 conn.setInstanceFollowRedirects(false);
@@ -74,7 +74,7 @@ public class ControlleurGUI extends Component implements ActionListener, WindowL
             fenetre.getDataset().clear();
             try {
                     fenetre.setTimestamp2(Integer.toString(parseInt(fenetre.getTimeStamp1()) + 120));
-                    GetMotionInterval motions = new GetMotionInterval("192.168.0.23", parseInt(fenetre.getTimeStamp1()),  parseInt(fenetre.getTimeStamp2()));
+                    GetMotionInterval motions = new GetMotionInterval("192.168.0.17", parseInt(fenetre.getTimeStamp1()),  parseInt(fenetre.getTimeStamp2()));
                     if (motions.getSize() == 0) {
                         JOptionPane.showMessageDialog(fenetre, "Aucune donnée présente !");
                     }
@@ -94,7 +94,13 @@ public class ControlleurGUI extends Component implements ActionListener, WindowL
         }
         if(e.getActionCommand().equals("Histogramme")){
 
-            new Histogramme();
+            try {
+                Histogramme histo = new Histogramme();
+
+                histo.displayHisto();
+            } catch (JsonProcessingException ex) {
+                throw new RuntimeException(ex);
+            }
         }
 
     }

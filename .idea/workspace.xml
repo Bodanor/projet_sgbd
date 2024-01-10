@@ -4,13 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2482c87-e45e-4500-bf8b-f909a5e745db" name="Changes" comment="Starting histogramme">
+    <list default="true" id="c2482c87-e45e-4500-bf8b-f909a5e745db" name="Changes" comment="Some temp files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ControlleurGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ControlleurGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GetMotionInterval.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GetMotionInterval.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Histogramme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Histogramme.java" afterDir="false" />
     </list>
     <list id="953f5fdb-c0ad-4f49-8341-5e42216b12f0" name="Changes by liwinux" comment="" />
-    <list id="39c5a1ec-4b0b-4871-bac4-50f4e78411bc" name="Changes by martin" comment="Changes by martin" />
+    <list id="39c5a1ec-4b0b-4871-bac4-50f4e78411bc" name="Changes by martin" comment="Changes by martin">
+      <change beforePath="$PROJECT_DIR$/src/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Histogramme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Histogramme.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,6 +44,31 @@
         <option name="url" value="https://github.com/Bodanor/projet_sgbd" />
       </UrlAndAccount>
     </option>
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/GUI.java">
+      <ranges>
+        <range start1="58" end1="59" start2="58" end2="59" changelist="c2482c87-e45e-4500-bf8b-f909a5e745db" />
+        <range start1="66" end1="67" start2="66" end2="67" changelist="39c5a1ec-4b0b-4871-bac4-50f4e78411bc" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/Histogramme.java">
+      <ranges>
+        <range start1="0" end1="0" start2="0" end2="1" changelist="c2482c87-e45e-4500-bf8b-f909a5e745db" />
+        <range start1="3" end1="3" start2="4" end2="5" changelist="c2482c87-e45e-4500-bf8b-f909a5e745db" />
+        <range start1="4" end1="4" start2="6" end2="9" changelist="c2482c87-e45e-4500-bf8b-f909a5e745db" />
+        <range start1="5" end1="5" start2="10" end2="12" changelist="c2482c87-e45e-4500-bf8b-f909a5e745db" />
+        <range start1="7" end1="8" start2="14" end2="15" changelist="c2482c87-e45e-4500-bf8b-f909a5e745db" />
+        <range start1="11" end1="13" start2="18" end2="18" changelist="39c5a1ec-4b0b-4871-bac4-50f4e78411bc" />
+        <range start1="14" end1="18" start2="19" end2="26" changelist="39c5a1ec-4b0b-4871-bac4-50f4e78411bc" />
+        <range start1="19" end1="21" start2="27" end2="54" changelist="c2482c87-e45e-4500-bf8b-f909a5e745db" />
+        <range start1="25" end1="29" start2="58" end2="164" changelist="c2482c87-e45e-4500-bf8b-f909a5e745db" />
+        <range start1="30" end1="31" start2="165" end2="166" changelist="c2482c87-e45e-4500-bf8b-f909a5e745db" />
+        <range start1="32" end1="33" start2="167" end2="189" changelist="c2482c87-e45e-4500-bf8b-f909a5e745db" />
+        <range start1="34" end1="34" start2="190" end2="206" changelist="c2482c87-e45e-4500-bf8b-f909a5e745db" />
+        <range start1="35" end1="35" start2="207" end2="401" changelist="c2482c87-e45e-4500-bf8b-f909a5e745db" />
+      </ranges>
+    </file>
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
@@ -108,6 +138,8 @@
       <workItem from="1704490437304" duration="4774000" />
       <workItem from="1704545008982" duration="4038000" />
       <workItem from="1704594304901" duration="731000" />
+      <workItem from="1704595045929" duration="91000" />
+      <workItem from="1704906466114" duration="20075000" />
     </task>
     <task id="LOCAL-00001" summary="Checkpoint">
       <option name="closed" value="true" />
@@ -189,7 +221,31 @@
       <option name="project" value="LOCAL" />
       <updated>1704548109544</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Added additionnal json fields">
+      <option name="closed" value="true" />
+      <created>1704595085064</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1704595085064</updated>
+    </task>
+    <task id="LOCAL-00012" summary="renamed the expertise linedit thingy">
+      <option name="closed" value="true" />
+      <created>1704595118335</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1704595118335</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Some temp files">
+      <option name="closed" value="true" />
+      <created>1704595129951</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1704595129951</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,6 +262,9 @@
     <MESSAGE value="Thread now starts at import click and does a one shot loop before going infinite" />
     <MESSAGE value="Changes by martin" />
     <MESSAGE value="Starting histogramme" />
-    <option name="LAST_COMMIT_MESSAGE" value="Starting histogramme" />
+    <MESSAGE value="Added additionnal json fields" />
+    <MESSAGE value="renamed the expertise linedit thingy" />
+    <MESSAGE value="Some temp files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some temp files" />
   </component>
 </project>

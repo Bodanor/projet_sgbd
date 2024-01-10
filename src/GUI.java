@@ -56,7 +56,7 @@ public class GUI extends JFrame{
         getContentPane().add(inputPanel, BorderLayout.SOUTH);
 
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setSize(800, 600);
+        setSize(1000, 600);
         setLocationRelativeTo(null);
         setVisible(true);
     }
